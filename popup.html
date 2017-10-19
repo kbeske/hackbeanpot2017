@@ -1,0 +1,86 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+<html>
+  <head>
+    <title>Getting Started Extension's Popup</title>
+    <style>
+      body {
+        font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+        font-size: 100%;
+        background-color: none;/**#e6e6ff;**/
+        
+      }
+      /**
+      ::-webkit-scrollbar {
+          width: 10px; 
+          background: none;
+          border: 1px solid #000; /** border around whole scrollbar*
+      }
+
+      ::-webkit-scrollbar-thumb {
+          height: 10%;
+          background: #ffffe6;
+          border: 1px dotted #000; 
+          }**/
+
+      #status {
+        /* avoid an excessively wide status text */
+        white-space: pre;
+        height: auto;
+        max-width: 500px;
+      }
+
+      #status > div {
+        display: flex;
+      }
+
+      #status > div .contain {
+        display: flex;
+        align-items: center;
+      }
+
+
+       .span {
+        
+          color: black;
+          font-size: 15px;
+          padding: 10px;
+          width: auto;
+          text-align: left;
+          margin: 0 auto;
+
+          
+          }
+
+      .iconbox {
+        width: 25px;
+        height: 25px;
+        margin: 0 10px;
+      }
+
+      .contain {
+        width: auto;
+        height: 35px;
+        background-color: none;/**#e6e6ff;**/
+
+      }
+    </style>
+
+    <!--
+      - JavaScript and HTML must be in separate files: see our Content Security
+      - Policy documentation[1] for details and explanation.
+      -
+      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
+     -->
+    <script src="popup.js"></script>
+  </head>
+  <body>
+    <div id="status"></div>
+    <img id="image-result" hidden>
+  </body>
+</html>
+
